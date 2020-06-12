@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* background: url('/static/img/pencils3.png'); */
+    background-image: url( "{% static 'img/pencils3.png' %}");
+    /* background: url('/website_folder/AjTEchLearnS/main/static/img/pencils3.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
+
+.box h2, h3 {
+    margin: 0 0 40px;
+    padding: 0;
+    color: rgb(22, 170, 228);
+    text-transform: uppercase;
+}
+
+.box input {
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.box input {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999999;
+}
+
+.box input[type="submit"] {
+    border-bottom: none;
+    cursor: pointer;
+    font-size: medium;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    ;
+    background: rgb(22, 104, 228);
+    color: #ffffff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.box form div {
+    position: relative;
+}
+
+.box form div label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    columns: #999;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.box input:focus~label, .box input:valid~label {
+    top: -12px;
+    left: 0;
+    color: rgb(22, 104, 228);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.box input:focus, .box input:valid {
+    border-bottom: 2px solid rgb(22, 104, 228);
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(12, 121, 231);
+}
+
+a:visited {
+    text-decoration: none;
+    color: rgb(12, 121, 231);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(12, 121, 231);
+}
+
+a:active {
+    text-decoration: underline;
+    color: rgb(12, 121, 231);
+}
+
+.forget_pass {
+    text-align: right
+}
+
+@media (max-width: 646px) {
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-image: linear-gradient( 190deg, rgba(255, 255, 255, 0.145), rgba(255, 255, 255, 0.145), rgba(62, 224, 203, 0.5), rgba(133, 44, 235, 0.0), rgba(133, 44, 235, 0.6), rgba(133, 44, 235, 0.3));
+    }
+}
+
+@media (max-width: 546px), (max-width: 846px), (max-width: 1046px) {
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-image: linear-gradient( 180deg, rgba(133, 44, 235, 0.0), rgba(62, 224, 203, 0.0), rgba(62, 224, 203, 0.5), rgba(133, 44, 235, 0.6), rgba(133, 44, 235, 0.3));
+    }
+    .box {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .5), 0 15px 20px rgba(0, 0, 0, 0.753);
+    }
+    .box:hover {
+        animation-name: box_hover;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes box_hover {
+        0%, 100% {
+            box-shadow: 0 15px 10px rgba(0, 0, 0, .5), 0 15px 20px rgba(0, 0, 0, 0.753);
+        }
+        50% {
+            box-shadow: 0 25px 10px rgba(0, 0, 0, .5), 0 15px 20px rgba(0, 0, 0, 0.753);
+        }
+    }
+}

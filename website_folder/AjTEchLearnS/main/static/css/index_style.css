@@ -151,13 +151,13 @@ body {
 
 .home-page-circle-3 {
     position: absolute;
-    width: 30vw;
+    width: 3vw;
     height: 3vw;
     border-radius: 50%;
     background-color: rgb(251, 0, 1, 50%);
     top: 34vw;
     left: 42.5vw;
-    z-index: -1;
+    z-index: -1
 }
 
 /* Near Start Learning Button Circle End */

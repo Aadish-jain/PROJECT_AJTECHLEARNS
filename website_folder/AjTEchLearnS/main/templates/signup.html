@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <title>SignUp_Form</title>
+
+    <!-- Favicon -->
+    <link href="logofinallight.png" rel="shortcut icon" />
+
+</head>
+
+<body>
+    <div class="box">
+        <h2>Sign Up</h2>
+        <form action="signupuser" method="POST">
+            {% csrf_token %}
+           
+            <div>
+                <input type="text" name="fname" required="" maxlength="20" autocomplete="off" id="fname">
+                <label for="fname">First Name</label>
+            </div>
+            <div>
+                <input type="text" name="lname" required="" maxlength="20" autocomplete="off" id="lname">
+                <label for="lname">Last Name</label>
+            </div>
+
+            <div>
+                <input type="text" name="username" required="" maxlength="20" autocomplete="off" id="username">
+                <label for="username">UserName</label>
+            </div>
+            <!-- <div>
+                <input type="text" name="" required="" maxlength="10" autocomplete="off"">
+                <label>Mobile Number</label>
+            </div> -->
+            <div>
+                <input type="email" name="email" required="" autocomplete="off" id="email">
+                <label for="email">E-Mail</label>
+            </div>
+            <div>
+                <input type="password" name="pass1" required="" autocomplete="off" id="pass1">
+                <label for="pass1">Create Password</label>
+            </div>
+            <div>
+                <input type="password" name="pass2" required="" autocomplete="off" id="pass2">
+                <label for="pass2">Confirm Password</label>
+            </div>
+            <a href="login_form.html"><input type="submit" name="" value="Sign Up"></a>
+            <h5 class="login_account"><a href="login_form.html"> Already! Have an Account?&nbsp;&nbsp;Login</a></h5>
+            <h5><a href="index.html"> Back to Home Page!</a></h5>
+        </form>
+
+    </div>
+
+    <body>
+
+</html>
