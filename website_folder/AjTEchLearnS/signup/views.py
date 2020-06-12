@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse,redirect
+from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 # Create your views here.
@@ -20,27 +20,33 @@ def handlesignup(request):
         # username should be under 10 characters
         if len(username) > 10:
             messages.error(request,'Username must be under 10 character')
-            return redirect('home')
+            # return redirect('home')
+            return render(request,'signup.html')
         
         # username should be alphanumeric
         if not username.isalnum():
             messages.error(request,"Username should only contain alphanumeric")
-            return redirect('home')
+            # return redirect('home')
+            return render(request,'signup.html')
         
         # password matching
         if pass1 != pass2:
             messages.error(request,"Passwords do not match")
-            return redirect('home')
+            # return redirect('home')
+            return render(request,'signup.html')
 
-
-        # Create the user
-        myuser = User.objects.create_user(username,email,pass1)
-        myuser.first_name = fname
-        myuser.last_name = lname
-        myuser.save()
-        messages.success(request,"Your AjTEchLearnS account has been successfully created")
-        # return render(request,'success.html')
-        return redirect('home')
+        # elif User.objects.filter(username=username).exists():
+        #     print('Username Taken')
+        else:
+            # Create the user
+            user = User.objects.create_user(username,email,pass1)
+            user.first_name = fname
+            user.last_name = lname
+            user.save()
+            messages.success(request,"Your AjTEchLearnS account has been successfully created")
+            print('user created')
+            # return render(request,'success.html')
+            return redirect('login')
 
     else:
         return render(request,'page_404_error.html')

@@ -52,6 +52,10 @@
             <a href="login_form.html"><input type="submit" name="" value="Sign Up"></a>
             <h5 class="login_account"><a href="login_form.html"> Already! Have an Account?&nbsp;&nbsp;Login</a></h5>
             <h5><a href="index.html"> Back to Home Page!</a></h5>
+                       
+            {% for message in messages %}
+            <h3 style="color: red; font-size: 10px;">&nbsp;&nbsp;&nbsp; {{message}}!</h3>
+            {% endfor %}
         </form>
 
     </div>

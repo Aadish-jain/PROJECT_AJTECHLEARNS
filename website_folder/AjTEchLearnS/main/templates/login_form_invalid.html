@@ -21,22 +21,19 @@
         <form action="loginuser" method="POST">
             {% csrf_token %}
             <div>
-                <input type="text" name="username" id = "username" required="" maxlength="20" autocomplete="off">
-                <label for="username" >Username</label>
+                <input type="text" name="username" id="username" required="" maxlength="20" autocomplete="off">
+                <label for="username">Username</label>
             </div>
             <div>
-                <input type="password" name="password" id = "password"  required="" autocomplete="off">
-                <label for="password" >Password</label>
+                <input type="password" name="password" id="password" required="" autocomplete="off">
+                <label for="password">Password</label>
                 <h5 class="forget_pass"><a href="forget_pass.html">Forget Password?</a></h5>
             </div>
             <a href="homepage2.html"><input type="submit" name="" value="Submit"></a>
+            <p style="color: red; font-size: 15px;"> &nbsp;&nbsp;&nbsp; Invalid Credientials! </p>
             <h5 class="no_account"> <a href="signUp.html"> Not Have an Account !&nbsp;&nbsp;Sign Up</a></h5>
             <h5><a href="index.html"> Back to Home Page!</a></h5>
             
-            
-{% for message in messages %}
-            <h3 style="color: red; font-size: 15px;">&nbsp;&nbsp;&nbsp; {{message}}</h3>
-            {% endfor %}
         </form>
     </div>
 </body>
