@@ -69,7 +69,7 @@
                 <div class="navbar disable-select">
                     <ul>
                         <li><a href="" class="active">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="about/">About</a></li>
                         <li><a href="#explore">Explore</a></li>
                         <!-- <li> <a href="" class="dropbtn dropdown">Dropdown
                                 <i class="fa fa-caret-down"></i>
@@ -81,15 +81,15 @@
                              </div> -->
                              
                         {% if user.is_authenticated %}
-                        <li><a href="#">{{user.username}}
-                        <i class="fa fa-caret-down"></i></a>
+                        <li><a href="#" style="color:white;font-size: 20px;" >{{user.username}}</a>
+                        <!-- <i class="fa fa-caret-down"></i> -->
                         </li>
                         <li><a href="logout/">Log Out</a></li>
 
                         {% else %}
 
                         <li><a href="login/login">LogIn</a></li>
-                        <li><a href="/signup">SignUp</a></li>
+                        <li><a href="signup/signup">SignUp</a></li>
 
                         {% endif %}
     {% for message in messages %}
@@ -121,7 +121,7 @@
                         <h3>Explore your ways to Learn !</h3>
 
                         <span class="cv-btn  disable-select">
-                            <a href="" class="enroll_free">Enroll for Free</a>
+                            <a href="login/login" class="enroll_free">Enroll for Free</a>
                             <a href="" class="Start_learning">Start Learning</a>
                         </span>
                     </span>
@@ -133,24 +133,24 @@
     <!-- Fixed Social Icons -->
     <div id="fixed-social">
         <div>
-            <a href="#" class="fixed-facebook" target="_blank"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
+            <a href="https://www.facebook.com/" class="fixed-facebook" target="_blank"><i class="fa fa-facebook"></i> <span>Facebook</span></a>
         </div>
         <div>
-            <a href="#" class="fixed-instagram" target="_blank"><i class="fa fa-instagram"></i>
+            <a href="https://www.instagram.com/" class="fixed-instagram" target="_blank"><i class="fa fa-instagram"></i>
                 <span>Instagram</span></a>
         </div>
         <div>
-            <a href="#" class="fixed-twitter" target="_blank"><i class="fa fa-twitter"></i> <span>Twitter</span></a>
+            <a href="https://www.twitter.com/" class="fixed-twitter" target="_blank"><i class="fa fa-twitter"></i> <span>Twitter</span></a>
         </div>
         <div>
-            <a href="#" class="fixed-youtube" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a>
+            <a href="https://www.youtube.com/" class="fixed-youtube" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a>
         </div>
 
         <div>
-            <a href="#" class="fixed-linkedin" target="_blank"><i class="fa fa-linkedin"></i> <span>LinkedIn</span></a>
+            <a href="https://www.linkedin.com/" class="fixed-linkedin" target="_blank"><i class="fa fa-linkedin"></i> <span>LinkedIn</span></a>
         </div>
         <div>
-            <a href="#" class="fixed-github" target="_blank"><i class="fa fa-github"></i> <span>Github</span></a>
+            <a href="https://www.github.com/" class="fixed-github" target="_blank"><i class="fa fa-github"></i> <span>Github</span></a>
         </div>
 
 

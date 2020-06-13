@@ -23,5 +23,6 @@ urlpatterns = [
     url('login/',include('login.urls')),
     # url('loginuser/',include('login.urls'))
     url('logout/',include('logout.urls')),
+    url('about/',include('about.urls')),
     ]
 
