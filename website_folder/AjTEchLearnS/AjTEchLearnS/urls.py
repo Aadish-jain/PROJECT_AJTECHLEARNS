@@ -21,8 +21,10 @@ urlpatterns = [
     path('',include('main.urls')),
     url('signup/',include('signup.urls')),
     url('login/',include('login.urls')),
-    # url('loginuser/',include('login.urls'))
     url('logout/',include('logout.urls')),
     url('about/',include('about.urls')),
+    url('contact/',include('Contact_app.urls')),
+    # url('blog/',include('blog.urls'))
+
     ]
 
