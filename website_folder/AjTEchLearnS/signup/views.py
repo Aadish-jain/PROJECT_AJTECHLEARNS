@@ -4,7 +4,7 @@ from django.contrib import messages
 # Create your views here.
 
 def signup(request):
-    return render(request,'signup.html')
+    return render(request,'login/signup.html')
 
 def handlesignup(request):
     if request.method == 'POST':
@@ -21,19 +21,19 @@ def handlesignup(request):
         if len(username) > 10:
             messages.error(request,'Username must be under 10 character')
             # return redirect('home')
-            return render(request,'signup.html')
+            return render(request,'login/signup.html')
         
         # username should be alphanumeric
         if not username.isalnum():
             messages.error(request,"Username should only contain alphanumeric")
             # return redirect('home')
-            return render(request,'signup.html')
+            return render(request,'login/signup.html')
         
         # password matching
         if pass1 != pass2:
             messages.error(request,"Passwords do not match")
             # return redirect('home')
-            return render(request,'signup.html')
+            return render(request,'login/signup.html')
 
         # elif User.objects.filter(username=username).exists():
         #     print('Username Taken')
@@ -49,4 +49,4 @@ def handlesignup(request):
             return redirect('login')
 
     else:
-        return render(request,'page_404_error.html')
+        return render(request,'page_404/page_404_error.html')

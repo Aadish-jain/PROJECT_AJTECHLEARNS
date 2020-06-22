@@ -1,11 +1,11 @@
 from django.shortcuts import render,redirect
-from . models import Contact
+from . models import Contact_app
 from django.contrib import messages
 from . import urls
 # Create your views here.
-def contact(request):
+def contact_app(request):
     # messages.success(request,'Welcome to contact')
-    return render(request,'contact.html')
+    return render(request,'contact/contact.html')
 def contact_form(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -18,7 +18,7 @@ def contact_form(request):
             messages.error(request,"Please fill the form correctly")
             return redirect('/contact/')
         else:
-            contact = Contact(name = name, email = email, phone=phone, content=content)
+            contact = Contact_app(name = name, email = email, phone=phone, content=content)
             contact.save()
             messages.success(request,'We will Contact and resolve your issue within 24 hours..')
     return redirect('/')

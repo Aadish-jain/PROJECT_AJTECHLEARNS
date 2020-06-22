@@ -5,6 +5,6 @@ from . import views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', views.contact,name='contact'),
+    path('', views.contact_app,name='contact'),
     path('contact_form/',views.contact_form,name="contact_form")
     ]

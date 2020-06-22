@@ -23,7 +23,7 @@ urlpatterns = [
     url('login/',include('login.urls')),
     url('logout/',include('logout.urls')),
     url('about/',include('about.urls')),
-    url('contact/',include('contact.urls')),
+    url('contact/',include('Contact_app.urls')),
     # url('blog/',include('blog.urls'))
 
     ]

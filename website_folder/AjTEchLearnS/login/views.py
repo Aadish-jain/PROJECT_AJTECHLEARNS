@@ -6,7 +6,7 @@ from django.contrib import messages
 # Create your views here.
 
 def login(request):
-    return render(request,'login_form.html')
+    return render(request,'login/login_form.html')
 
     
 
@@ -26,7 +26,7 @@ def handlelogin(request):
             messages.error(request,"Invalid Credientials")
             return redirect('login')
     else:
-        return render(request,'page_404_error.html')
+        return render(request,'page_404/page_404_error.html')
 
     #     user = auth.authenticate(username=username1,password=password1)
     #     if user is None:
@@ -52,5 +52,5 @@ def handlelogin(request):
         #     return render(request,'index.html')
 
 
-#     return render(request,'page_404_error.html')
+#     return render(request,'page_404/page_404_error.html')
 
