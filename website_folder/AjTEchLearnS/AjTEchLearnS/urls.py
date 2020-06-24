@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import include,url
 from django.contrib import admin
 from django.urls import path
+from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('main.urls')),
@@ -24,7 +25,9 @@ urlpatterns = [
     url('logout/',include('logout.urls')),
     url('about/',include('about.urls')),
     url('contact/',include('Contact_app.urls')),
-    # url('blog/',include('blog.urls'))
-
+    url('blog/',include('blog.urls')),
+    # path('blog_page/',include('blog.urls')),
+ path('blog_page/',views.blog_page,name='blog_page'),
+    
     ]
 

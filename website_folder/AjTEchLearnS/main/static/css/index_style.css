@@ -306,6 +306,7 @@ header .brand-name a {
     text-decoration: none;
     font-size: 30px;
     font-weight: 600;
+    /* opacity: 0; */
     /* color: #ffffff; */
     /* position: relative; */
 }
