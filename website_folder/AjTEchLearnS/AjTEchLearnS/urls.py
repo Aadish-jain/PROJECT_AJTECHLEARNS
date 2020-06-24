@@ -28,6 +28,7 @@ urlpatterns = [
     url('blog/',include('blog.urls')),
     # path('blog_page/',include('blog.urls')),
  path('blog_page/',views.blog_page,name='blog_page'),
+ url('search/',include('search.urls')),
     
     ]
 
