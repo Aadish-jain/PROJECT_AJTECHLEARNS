@@ -10,7 +10,7 @@ def login(request):
 
     
 
-
+# Authenticated API
 def handlelogin(request):
     if request.method == 'POST':
          # Get the post parameters

@@ -6,6 +6,7 @@ from django.contrib import messages
 def signup(request):
     return render(request,'login/signup.html')
 
+# Authenticated API
 def handlesignup(request):
     if request.method == 'POST':
         # Get the post parameters

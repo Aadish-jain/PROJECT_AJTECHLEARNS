@@ -6,6 +6,8 @@ from . import urls
 def contact_app(request):
     # messages.success(request,'Welcome to contact')
     return render(request,'contact/contact.html')
+
+# Authenticated API
 def contact_form(request):
     if request.method == 'POST':
         name = request.POST['name']

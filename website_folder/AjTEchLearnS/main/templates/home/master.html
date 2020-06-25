@@ -100,10 +100,11 @@
                         <li><a href="/blog_page/"class=" {% block blog_pageactive %}{% endblock blog_pageactive %}" {% block blog_pagedisable %}
                         {% endblock blog_pagedisable %}>Blog_Page</a></li>
                         
-                        {% comment %} <li><a href="contact/"class=" {% block contactactive %}{% endblock contactactive %}" {% block contactdisable %}
-                        {% endblock contactdisable %}>Contact</a></li> {% endcomment %}
-                        {% comment %} <li><a href="blog/"class=" {% block blogactive %}{% endblock blogactive %}" {% block blogdisable %}
-                        {% endblock blogdisable %}>Blog</a></li> {% endcomment %}
+                         <li><a href="contact/"class=" {% block contactactive %}{% endblock contactactive %}" {% block contactdisable %}
+                        {% endblock contactdisable %}>Contact</a></li> 
+                        
+                    <li><a href="blog/"class=" {% block blogactive %}{% endblock blogactive %}" {% block blogdisable %}
+                        {% endblock blogdisable %}>Blog</a></li> 
                          
                         {% comment %} <li><a href="/">Blog</a></li> {% endcomment %}
                         <!-- <li> <a href="" class="dropbtn dropdown">Dropdown
@@ -127,10 +128,12 @@
                         <li><a href="signup/signup">SignUp</a></li>
 
                         {% endif %}
-                        <li><form method="get" action = "search/"class="form-inline my-2">
+                        {% comment %} <li><form method="get" action = "search/"class="form-inline my-2">
       <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" name="query" id = "query">
       <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-    </form> </li>
+    </form> </li> {% endcomment %}
+
+    
     {% comment %} {% for message in messages %}
     <h3>{{message}}</h3>
     {% endfor %} {% endcomment %}

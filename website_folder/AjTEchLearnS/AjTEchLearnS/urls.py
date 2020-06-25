@@ -17,8 +17,12 @@ from django.conf.urls import include,url
 from django.contrib import admin
 from django.urls import path
 from blog import views
+
+admin.site.site_header = "AjTechLearnS Admin"
+admin.site.index_title = "Welcome to AjTechLearnS Admin Panel"
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('',include('main.urls')),
     url('signup/',include('signup.urls')),
     url('login/',include('login.urls')),

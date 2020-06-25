@@ -4,8 +4,15 @@ from . import views
 
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    # API to post a comment
+    path('postComment',views.postComment,name="postComment"),
+
+    
     path('', views.blog,name='blog'),
+
     path('blog_page/',views.blog_page,name='blog_page'),
+    
     path('<str:slug>',views.blogPost,name = 'blogPost'),
+    
+
     ]
