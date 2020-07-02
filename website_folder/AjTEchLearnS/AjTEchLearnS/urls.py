@@ -22,7 +22,7 @@ admin.site.site_header = "AjTechLearnS Admin"
 admin.site.index_title = "Welcome to AjTechLearnS Admin Panel"
 
 urlpatterns = [
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('',include('main.urls')),
     url('signup/',include('signup.urls')),
     url('login/',include('login.urls')),
