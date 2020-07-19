@@ -1,13 +1,15 @@
 {% extends 'home/master.html' %}
 {% load humanize %}
 {% load extras %}
+
 {% block maincontent %}
 <div class="container m-5">
     <div class="blog-post">
+    
         <h2 class="blog-post-title">{{post.title}}</h2>
         <p class="blog-post-meta">{{post.timeStamp}} by <a href="#">{{post.author}}</a></p><br>
         <hr>
-        <p>{{post.content}}</p>
+        <p>{{post.content|safe}}</p>
     </div>
     <div class="container">
         <h6 class="my-3">Comments ({{comments.count}})</h6>
