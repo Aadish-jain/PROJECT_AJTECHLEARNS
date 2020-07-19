@@ -7,4 +7,4 @@ admin.site.register(BlogComment)
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     class Media:
-        js = ('tinymce.js',)
+        js = ('js/tinymce.js',)
